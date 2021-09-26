@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulario.css" media="">
+    <script src="./script.js"></script>
+    
+    <title>Cadastro</title>
+</head>
+<body>
+    <div>
+        <h1 id="titulo"> Cadastro Pessoal </h1>
+         <p id="subtitulo">Complete suas Informações</p>    
+    </div>
+
+    <form>
+        <fieldset class="grupo"> 
+            <div class="campo"> 
+                <label for="nome"><strong>Nome*</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome*</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label for="cpf"><strong>CPF*</strong></label>
+            <input type="number" name="cpf" id="cpf" required>
+        </div>
+
+        <div class="campo">
+            <label for="rg"><strong>RG</strong></label>
+            <input type="number" name="rg" id="rg" required>
+        </div>
+
+        <div class="campo">
+            <label for="Genero"><strong>Genero</strong></label>
+            <label for="">
+                <input type="radio" name="devilweb" value="feminino">Feminino
+            </label>
+            <label for=""><input type="radio" name="devilweb" value="masculino">Masculino
+            </label>
+        </div>
+        
+<fieldset class="grupo">
+        <div class="col-3 mb-3">
+            <label><strong>Telefone Celular*</strong></label>
+            <input type="tel" id="tel" placeholder="(DD) X XXXX-XXXX" autocomplete="off" class="celular validar" required>
+        </div>
+    
+        <div class="col-3 mb-3">
+            <label><strong>Telefone Fixo</strong></label>
+            <input type="tel" id="tel1" placeholder="(DD) XXXX-XXXX" autocomplete="off" >
+        </div>
+    </fieldset>
+
+
+        <fieldset class="grupo"> 
+            <div class="campo"> 
+                <label for="nome"><strong>Endereço</strong></label>
+                <input type="text" name="nome" id="nome">
+            </div>
+           
+            <div class="campo">
+                <label for="sobrenome"><strong>Bairro</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome">
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label for="sobrenome"><strong>Cidade</strong></label>
+            <input type="text" name="cidade" id="cidade">
+        </div>
+
+    </form>
+    
+        <div class="campo"> 
+            <label for=""><strong>Estado</strong></label> 
+        <select id="Estado>
+            <option value="estado">Selecione o Estado</option> 
+            <option value="ac">Acre</option> 
+            <option value="al">Alagoas</option> 
+            <option value="am">Amazonas</option> 
+            <option value="ap">Amapá</option> 
+            <option value="ba">Bahia</option> 
+            <option value="ce">Ceará</option> 
+            <option value="df">Distrito Federal</option> 
+            <option value="es">Espírito Santo</option> 
+            <option value="go">Goiás</option> 
+            <option value="ma">Maranhão</option> 
+            <option value="mt">Mato Grosso</option> 
+            <option value="ms">Mato Grosso do Sul</option> 
+            <option value="mg">Minas Gerais</option> 
+            <option value="pa">Pará</option> 
+            <option value="pb">Paraíba</option> 
+            <option value="pr">Paraná</option> 
+            <option value="pe">Pernambuco</option> 
+            <option value="pi">Piauí</option> 
+            <option value="rj">Rio de Janeiro</option> 
+            <option value="rn">Rio Grande do Norte</option> 
+            <option value="ro">Rondônia</option> 
+            <option value="rs">Rio Grande do Sul</option> 
+            <option value="rr">Roraima</option> 
+            <option value="sc">Santa Catarina</option> 
+            <option value="se">Sergipe</option> 
+            <option value="sp">São Paulo</option> 
+            <option value="to">Tocantins</option> 
+        </select>
+        </div>
+        
+    
+        <div class="campo">
+            <label for="email"><strong >E-mail*</strong></label>
+            <input type="email" name="email" id="email" required>
+         
+        </div>
+
+    </form>
+    
+    <button class="botao" type="submit" onclick="Verificacpf">Enviar</button> 
+</body>
+
+
+<div class="base-rodape">
+	<div class="conteudo">
+		<div class="rows">
+		<div class="col-12 text-center mt-4">
+    			<small class="text-center"><b>© 2021 - Mayara Brito| Programa Itaú Tech | Gama Academy </b></small>
+    			<small class="text-center pt-0">Todos os direitos reservados.</small>
+    					</div>
+
+		</div>
+	</div>
+</div>
+</body>
+
+<script src="js/valid.js"></script>
+<script src="js/validateCPF.js"></script>
+
+<script src="js/formMask.js"></script>
+<script src="js/formMask_V2.js"></script>
+    <!--importar script da máscara-->
+    <script>
+        new FormMask(document.querySelector("#cpf"), "___.___.___-__", "_", [".", "-"])
+        new FormMask(document.querySelector("#tel"), "(__)_____-____", "_", ["(", ")", "-"])
+        new FormMask(document.querySelector("#tel1"), "(__)____-____", "_", ["(", ")", "-"])
+    </script>
+
+
+</html>
